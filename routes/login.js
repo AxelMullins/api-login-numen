@@ -30,7 +30,7 @@ router.post(
 /* VER TODOS */
 router.get(
   "/allUsers",
-  //  authSession,
+   authSession,
   authJWT,
   controller.allUsers
 );
@@ -38,7 +38,7 @@ router.get(
 /* VER UNO */
 router.get(
   "/user/:id",
-  //  authSession,
+   authSession,
   authJWT,
   validateId,
   controller.user
@@ -47,7 +47,7 @@ router.get(
 /* EDITAR */
 router.put(
   "/editPassword/:id",
-  // authSession,
+  authSession,
   authJWT,
   validateId,
   [
@@ -64,7 +64,7 @@ router.put(
 /* BORRAR */
 router.delete(
   "/deleteUser/:id",
-  // authSession,
+  authSession,
   authJWT,
   validateId,
   controller.deleteUser
